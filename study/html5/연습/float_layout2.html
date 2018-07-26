@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>float_layout2</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <style>
+        *{margin:0;padding:0;}
+        #wrap{width:960px;margin:30px auto 0;}
+        header,article,article>h2,footer{border-radius:10px;}
+        
+        header{width:960px;height:100px;text-align:center;background-color:gray;}
+        section{margin:10px 0;*zoom:1;}
+        section:after{display:block;clear:both;content:"";}
+        section>.left{float:left;}
+        section>.left>.lnb{width:200px;height:250px;text-align:center;background-color:blue;}
+        section>.left>.ad{width:200px;height:140px;margin-top:10px;text-align:center;background-color:pink;}
+        section>.cont{float:left;width:750px;height:400px;margin-left:10px;text-align:center;background-color:yellow;}
+        
+        footer{width:960px;height:100px;text-align:center;background-color:darkred;}
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <header><h1>해더</h1></header>
+    <section>
+        <article class="left">
+            <h2 class="lnb">LNB</h2>
+            <h2 class="ad">AD</h2>
+        </article>
+        <article class="cont"><h2>컨텐츠</h2></article>
+    </section>
+    <footer><h2>풋터</h2></footer>
+</div>
+</body>
+</html>
