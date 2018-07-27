@@ -1,19 +1,75 @@
-@charset "utf-8";
+/*@charset "utf-8";
 
-#wrap{width:600px;margin:0 auto;}
+#wrap{width:600px;margin:0 auto;background-color:#333;}
 
 header{width:600px;height:100px;color:white;text-align:center;background-color:#006699;}
 header>.top{*zoom:1;}
 header>.top:efter{display:block;clear:both;content:"";}
 header>.top>h1{float:left;margin:0 30px;font-size:30px;line-height:100px;text-align:center;}
-header>.top>ul>li{float:left;margin-right:10px;line-height:100px;text-align:center;}
-header>.top>ul>li:nth-child(3){color:yellow;font-weight:800;}
-header>.top>ul>li:nth-child(4){margin-right:0;}
+header>.top>ul>li>a{float:left;margin-right:10px;color:white;line-height:100px;text-align:center;}
+header>.top>ul>li>a:nth-child(3){color:yellow;}
+header>.top>ul>li>a:nth-child(3){color:yellow;font-weight:800;}
+header>.top>ul>li>a:nth-child(4){margin-right:0;}
 
-section{width:570px;padding:10px;border:5px solid #333;}
-section>article>h2{font-size:25px;padding:30px 10px 30px 0;}
+section{width:570px;margin:5px auto;padding:10px;background-color:#fff;}
+section>article>h2{font-size:25px;text-indent:10px;padding:30px 0;}
 section>article>p>img{float:right;width:300px;margin:0 0 10px 10px;height:auto;box-shadow:3px 3px 3px gray;}
-section>article>p{font-size:14px;margin-bottom:10px;padding:10px;}
+section>article>p{font-size:14px;margin-bottom:10px;padding:0 10px;}
 section{}
 
-footer{height:80px;color:white;font-size:16px;line-height:80px;text-align:center;background-color:#333;}
+footer{height:80px;color:white;font-size:16px;line-height:80px;text-align:center;background-color:#333;}*/
+
+
+
+
+
+@charset "utf-8";/*컴마를 잊어선 안된다*/
+
+#wrap{width:600px;margin:0 auto;background-color:#333;}
+
+header{position:relative;height:100px;background-color:#069;}
+header>h1{position:absolute;left:30px;top:40px;height:100px;color:#fff;font-size:30px;}
+header>nav{position:absolute;left:240px;top:40px;/*outline:1px solid red;*/}/*이곳에 포지션하는게 좋다. 포지션을 할때 위드를 주지 않아도 된다*/
+header>nav>.gnb{width:260px;*zoom:1;}/*부모에게 총 위드를 넣는게 좋다*/
+header>nav>.gnb:after{display:block;clear:both;content:"";}
+header>nav>.gnb>li{width:65px;float:left;}
+/*플롯 혹은 포지션을 위드값이 정해지지 않은 상태에서 사용하면 컨턴츠 양만큼 줄어든디.*/
+header>nav>.gnb>li>a{display:block;height:20px;/*전체가 터치영역이 된다*/color:#fff;line-height:20px;text-align:center;}
+/*nth-child()는 친 형제 관계에서만 성립*/
+header>nav>.gnb>li:nth-child(3)>a{color:yellow;font-weight:800;text-shadow:1px 1px 1px rgb(255,255,255,0.5);/*네번째에 투명도를 줄 수 있다*/}
+
+section{width:570px;margin:5px auto 0;padding:30px 10px 10px;background-color:#fff;}
+section>article>h2{margin-bottom:30px;color:#000;font-weight:800;font-size:25px;}
+/*확실 할때만 사용*/
+section>article>p{font-size:14px;line-height:1.5;/*150% 기본 1.2*/*zoom:1;}
+section>article>p:after{display:block;clear:both;content:"";}
+section .frame{display:block;overflow:hidden;float:right;width:300px;margin:5px 0 5px 5px;border-radius:5px;box-shadow:3px 3px 3px #aaa;}
+section .frame>img{/*이미지 밑에 약간 뜨는 현상 해경방범*/display:block;/*방법1*/vertical-align:top;/*방법2*/width:100%;}
+
+footer>address{height:80px;color:#fff;font-weight:800;font-size:16px;line-height:80px;text-align:center;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
